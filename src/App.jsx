@@ -107,7 +107,7 @@ export default function App() {
           <h1>John Haddock</h1>
           <p className="hero-sub">
             <p className="hero-sub">
-              Statistics · Economics Minor · AI Certificate · University of Florida Honors Program
+              Bachelor of Science in Statistics · Economics Minor · AI Certificate · University of Florida Honors Program
             </p>
           </p>
           <p className="hero-bio">
