@@ -150,7 +150,7 @@ export default function App() {
                 <div className="timeline-header">
                   <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                     <div style={{ width: "80px", height: "80px", borderRadius: "6px", border: "1px solid #e2e8f0", padding: "4px", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img src="/gators-logo.png" alt="UF" style={{ height: "70px", width: "70px", objectFit: "contain" }} />
+                      <img src="University-of-Florida-Symbol.png" alt="UF" style={{ height: "100px", width: "100px", objectFit: "contain" }} />
                     </div>
                     <div>
                       <h3>University of Florida</h3>
@@ -171,7 +171,7 @@ export default function App() {
                 <div className="timeline-header">
                   <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                     <div style={{ width: "80px", height: "80px", borderRadius: "6px", border: "1px solid #e2e8f0", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <span style={{ fontWeight: "700", fontSize: "0.7rem", color: "#003087", textAlign: "center", lineHeight: 1.3 }}>SHORE{"\n"}CREST</span>
+                      <img src="/Shorecrest.png" alt="Shorecrest.png" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "6px", border: "0px solid #e2e8f0", padding: "0px", background: "#fff" }}/>
                     </div>
                     <div>
                       <h3>Shorecrest Preparatory School</h3>
