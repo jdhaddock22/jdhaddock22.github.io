@@ -23,7 +23,7 @@ const EXPERIENCE = [
     logo: "/blesto.png",
     bullets: [
       "Prepared NFL-style preliminary scouting reports on 2026 NFL Draft prospects",
-      "Compiled statistics, biographies, and background using LexisNexis",
+      "Compiled statistics, biographies, and background information using LexisNexis",
     ],
   },
 ];
@@ -31,41 +31,53 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     title: "Transfer Portal Database Automation",
-    tags: ["Teamworks API","Google Sheets API","Python","Process Development"],
-    desc: "Built a Transfer Portal Database using Teamworks Transfer Portal Database to track all transfer portal players, provide information to scouts and coaches, and sort priorities using analytics grades and scouting reports.",
+    tags: ["Teamworks API", "Google Sheets API", "Python", "Process Development"],
+    docs: "open",
+    desc: "Built a Transfer Portal Database using Teamworks to track all transfer portal players, provide information to scouts and coaches, and sort priorities using analytics grades and scouting reports.",
   },
   {
     title: "Advance Reports",
-    tags: ["Python", "Teamworks API","Data Visualization"],
-    desc: "Found Actionable Insights from data on opponent trends, tendencies, and weaknesses. Provided coaching staff with digestible data-derived suggestions to influence strategy and decision making. Used and NFL model to provide useful and easy to understand reports with explanatory visualizations.",
+    tags: ["Python", "Teamworks API", "Data Visualization"],
+    docs: "open",
+    desc: "Found actionable insights from data on opponent trends, tendencies, and weaknesses. Provided coaching staff with digestible data-derived suggestions to influence strategy and decision making using an NFL-style reporting model.",
   },
   {
     title: "Transfer Portal Snap Count Study and Pipeline",
-    tags: ["Python", "Teamworks API","Google Sheets API"],
-    desc: "Used snap counts to identify players who are playing at a level that signals they are worth evaluating. Set up and autmated system to create area lists for scouts and auto-populate work lists weekly.",
+    tags: ["Python", "Teamworks API", "Google Sheets API"],
+    docs: "limited",
+    desc: "Used snap counts to identify players playing at a level that signals they are worth evaluating. Set up and automated a system to create area lists for scouts and auto-populate work lists weekly.",
   },
   {
     title: "Comprehensive Analytics Grade Database and Tracker",
-    tags: ["Python", "Statistical Modeling", "Teamworks-Telemetry","Teamworks-Advanced Stats"],
-    desc: "Used data provided by Teamworks Advanced Stats models broken down at the play level to recalculate and opponent adjust Advanced Stats. Combined with numerous Gators Football Analytics Metrics to create analytics grades. Tracked grades over the course of the seaon to provide insight into player trends that motivate scout analysis.",
+    tags: ["Python", "Statistical Modeling", "Teamworks-Telemetry", "Teamworks-Advanced Stats"],
+    docs: "open",
+    desc: "Used Teamworks Advanced Stats play-level data to recalculate and opponent-adjust advanced stats. Combined with Gators Football Analytics metrics to create composite grades tracked over the season to surface player trends.",
   },
   {
     title: "Athleticism, Track Time, and Physical Trait Studies",
-    tags: ["Python", "Teamworks API","Regression","XGBoost","Data Cleaning"],
-    desc: "Conducted 10+ studies on athleticim markers to provide insight into which physical traits correlate with Football Performance",
+    tags: ["Python", "Teamworks API", "Regression", "XGBoost", "Data Cleaning"],
+    docs: "open",
+    desc: "Conducted 10+ studies on athleticism markers to provide insight into which physical traits correlate with football performance.",
   },
 ];
 
 const SKILLS = [
   { category: "Programming Languages", items: ["Python", "R"] },
-  { category: "Data & Services", items: ["Teamworks API", "Teamworks-Telemetry", "LexisNexis", "Google Sheets"] },
-  { category: "Methods", items: ["Regression", "XGBoost", "Machine Learning","Voronoi Analysis", "Player Tracking"] },
+  { category: "Data & Services", items: ["Teamworks API", "Teamworks-Telemetry", "PFF", "LexisNexis", "Google Sheets"] },
+  { category: "Methods", items: ["Regression", "XGBoost", "Machine Learning", "Voronoi Analysis", "Player Tracking"] },
   { category: "Football", items: ["Scouting", "Game Planning", "Transfer Portal Eval", "NIL/Contracts"] },
+];
+
+const ACHIEVEMENTS = [
+  "Presidential Scholarship – University of Florida",
+  "UF Honors Program",
+  "Mu Alpha Theta – National Math Honors Society",
+  "Cum Laude – Shorecrest Preparatory School",
+  "Wharton Moneyball Program Alumni",
 ];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeProject, setActiveProject] = useState(null);
 
   const scrollTo = (id) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
@@ -74,6 +86,8 @@ export default function App() {
 
   return (
     <div className="portfolio">
+
+      {/* NAV */}
       <nav className="nav">
         <div className="nav-inner">
           <span className="nav-logo" onClick={() => scrollTo("about")}>JH</span>
@@ -97,18 +111,30 @@ export default function App() {
             Statistics & Economics · University of Florida Honors Program
           </p>
           <p className="hero-bio">
-            I provide a unqiue skillset that blends Football Data Analysis and Strategic Knowledge. I am effective at using these skills to make informed football decisions. I will make an immediate impact, leveraging my years of experience, Statistics (BS) degree, and analytical ability to assist any football program in making important gameday and strategic decisions.
+            I provide a unique skillset that blends football data analysis and strategic knowledge.
+            Currently working in the College Personnel Department for Gators Football — building
+            analytics pipelines, writing scouting reports used by coaches, and applying player
+            tracking to real roster decisions. Available December 2027.
           </p>
           <div className="hero-cta">
             <button className="btn-primary" onClick={() => scrollTo("Projects")}>View Projects</button>
             <button className="btn-secondary" onClick={() => scrollTo("Contact")}>Get in Touch</button>
           </div>
           <div className="hero-stats">
-            <div className="stat"><span className="stat-num">2+</span><span className="stat-label">Years in Football Analytics & Strategy</span></div>
+            <div className="stat">
+              <span className="stat-num">2+</span>
+              <span className="stat-label">Years in Football Analytics</span>
+            </div>
             <div className="stat-divider" />
-            <div className="stat"><span className="stat-num">20+</span><span className="stat-label">Analytics Projects</span></div>
+            <div className="stat">
+              <span className="stat-num">20+</span>
+              <span className="stat-label">Analytics Projects</span>
+            </div>
             <div className="stat-divider" />
-            <div className="stat"><span className="stat-num">DEC 2027</span><span className="stat-label">Graduation</span></div>
+            <div className="stat">
+              <span className="stat-num">DEC 2027</span>
+              <span className="stat-label">Graduation</span>
+            </div>
           </div>
         </div>
         <div className="hero-bg-text">ANALYTICS</div>
@@ -124,9 +150,13 @@ export default function App() {
                 <div className="timeline-dot" />
                 <div className="timeline-content">
                   <div className="timeline-header">
-                    <div style={{display:"flex", alignItems:"center", gap:"1rem"}}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                       {e.logo && (
-                        <img src={e.logo} alt={e.org} style={{height:"120px", width:"120px", objectFit:"contain", borderRadius:"6px", border:"1px solid #e2e8f0", padding:"4px", background:"#fff"}} />
+                        <img
+                          src={e.logo}
+                          alt={e.org}
+                          style={{ height: "80px", width: "80px", objectFit: "contain", borderRadius: "6px", border: "1px solid #e2e8f0", padding: "4px", background: "#fff" }}
+                        />
                       )}
                       <div>
                         <h3>{e.role}</h3>
@@ -149,14 +179,31 @@ export default function App() {
       <section id="projects" className="section section-alt">
         <div className="section-inner">
           <h2 className="section-title">Projects</h2>
+          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "2rem" }}>
+            Detailed documentation and source code available upon request.
+          </p>
           <div className="projects-grid">
             {PROJECTS.map((p, i) => (
-              <div
-                key={i}
-                className={`project-card ${activeProject === i ? "active" : ""}`}
-                onClick={() => setActiveProject(activeProject === i ? null : i)}
-              >
-                <h3>{p.title}</h3>
+              <div key={i} className="project-card">
+                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.5rem", marginBottom: "0.75rem" }}>
+                  <h3 style={{ margin: 0 }}>{p.title}</h3>
+                  {p.docs === "open" && (
+                    <span
+                      title="Full documentation available upon request"
+                      style={{ fontSize: "0.7rem", background: "rgba(34,197,94,0.1)", color: "#16a34a", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "99px", padding: "0.15rem 0.6rem", whiteSpace: "nowrap", flexShrink: 0 }}
+                    >
+                      ✦ Docs Available
+                    </span>
+                  )}
+                  {p.docs === "limited" && (
+                    <span
+                      title="Limited documentation due to team agreements"
+                      style={{ fontSize: "0.7rem", background: "rgba(249,115,22,0.1)", color: "var(--orange)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "99px", padding: "0.15rem 0.6rem", whiteSpace: "nowrap", flexShrink: 0 }}
+                    >
+                      ✦ Limited Docs
+                    </span>
+                  )}
+                </div>
                 <div className="tags">
                   {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
                 </div>
@@ -184,15 +231,7 @@ export default function App() {
           <div className="achievements">
             <h3>Achievements</h3>
             <div className="achievement-list">
-              {[
-                "Presidential Scholarship – University of Florida",
-                "UF Honors Program",
-                "3× Varsity Football State Champion",
-                "Mu Alpha Theta – National Math Honors Society",
-                "National Honor Society",
-                "Cum Laude – Shorecrest Preparatory School",
-                "Wharton Moneyball Program Alumni",
-              ].map((a) => (
+              {ACHIEVEMENTS.map((a) => (
                 <div key={a} className="achievement-item">
                   <span className="achievement-dot" />
                   {a}
@@ -211,21 +250,45 @@ export default function App() {
             I'm always open to conversations about football analytics, strategy, and data science.
           </p>
           <div className="contact-links">
+            <a href="mailto:jdhaddock22@gmail.com" className="contact-link">
+              <span className="contact-icon">✉</span>
+              <div>
+                <div>jdhaddock22@gmail.com</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--gray)", marginTop: "2px" }}>Preferred</div>
+              </div>
+            </a>
             <a href="mailto:j.haddock@gators.ufl.edu" className="contact-link">
               <span className="contact-icon">✉</span>
-              j.haddock@gators.ufl.edu
+              <div>
+                <div>j.haddock@gators.ufl.edu</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--gray)", marginTop: "2px" }}>Strictly UF Related</div>
+              </div>
+            </a>
+            <a href="tel:+19172805672" className="contact-link">
+              <span className="contact-icon">☎</span>
+              <div>
+                <div>+1 (917) 280-5672</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--gray)", marginTop: "2px" }}>Phone</div>
+              </div>
             </a>
             <a href="https://www.linkedin.com/in/john-haddock-057486265/" target="_blank" rel="noreferrer" className="contact-link">
               <span className="contact-icon">in</span>
-              LinkedIn
+              <div>
+                <div>LinkedIn</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--gray)", marginTop: "2px" }}>john-haddock-057486265</div>
+              </div>
             </a>
           </div>
+          <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "2rem" }}>
+            References available upon request.
+          </p>
         </div>
       </section>
 
       <footer className="footer">
         <span>John Haddock · {new Date().getFullYear()} · Built with React</span>
       </footer>
+
     </div>
   );
 }
