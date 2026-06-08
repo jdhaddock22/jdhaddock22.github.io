@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const NAV_LINKS = ["About", "Experience", "Projects", "Skills", "Contact"];
+const NAV_LINKS = ["About", "Education", "Experience", "Projects", "Skills", "Contact"];
 
 const EXPERIENCE = [
   {
@@ -71,8 +71,6 @@ const SKILLS = [
 const ACHIEVEMENTS = [
   "Presidential Scholarship – University of Florida",
   "UF Honors Program",
-  "Mu Alpha Theta – National Math Honors Society",
-  "Cum Laude – Shorecrest Preparatory School",
   "Wharton Moneyball Program Alumni",
 ];
 
@@ -108,7 +106,9 @@ export default function App() {
           <div className="hero-tag">Football Analytics & Strategy</div>
           <h1>John Haddock</h1>
           <p className="hero-sub">
-            Statistics & Economics · University of Florida Honors Program
+            <p className="hero-sub">
+              Statistics · Economics Minor · AI Certificate · University of Florida Honors Program
+            </p>
           </p>
           <p className="hero-bio">
             I provide a unique skillset that blends football data analysis and strategic knowledge.
@@ -139,7 +139,57 @@ export default function App() {
         </div>
         <div className="hero-bg-text">ANALYTICS</div>
       </section>
-
+      {/* EDUCATION */}
+      <section id="education" className="section section-alt">
+        <div className="section-inner">
+          <h2 className="section-title">Education</h2>
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                    <div style={{ width: "80px", height: "80px", borderRadius: "6px", border: "1px solid #e2e8f0", padding: "4px", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <img src="/gators-logo.png" alt="UF" style={{ height: "70px", width: "70px", objectFit: "contain" }} />
+                    </div>
+                    <div>
+                      <h3>University of Florida</h3>
+                      <span className="timeline-org">B.S. Statistics · Economics Minor · AI Certificate</span>
+                      <div><span className="timeline-period">Aug 2024 – Dec 2027</span></div>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>Honors Program · Presidential Scholarship</li>
+                  <li>Sports Analytics Club</li>
+                </ul>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                    <div style={{ width: "80px", height: "80px", borderRadius: "6px", border: "1px solid #e2e8f0", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontWeight: "700", fontSize: "0.7rem", color: "#003087", textAlign: "center", lineHeight: 1.3 }}>SHORE{"\n"}CREST</span>
+                    </div>
+                    <div>
+                      <h3>Shorecrest Preparatory School</h3>
+                      <span className="timeline-org">St. Petersburg, FL · Cum Laude</span>
+                      <div><span className="timeline-period">Graduated May 2024</span></div>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>35 ACT · 4.55 GPA</li>
+                  <li>3× Varsity Football State Champion</li>
+                  <li>Mu Alpha Theta · National Honor Society</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* EXPERIENCE */}
       <section id="experience" className="section">
         <div className="section-inner">
