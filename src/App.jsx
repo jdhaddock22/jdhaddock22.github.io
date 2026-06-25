@@ -111,10 +111,8 @@ export default function App() {
             </p>
           </p>
           <p className="hero-bio">
-            I provide a unique skillset that blends football data analysis and strategic knowledge.
-            Currently working in the College Personnel Department for Gators Football — building
-            analytics pipelines, writing scouting reports used by coaches, and applying player
-            tracking to real roster decisions. Available December 2027.
+            I provide a unique skillset that blends Football Data Analysis and Strategic Knowledge. I am effective at using these skills to make informed football decisions. I will make an immediate impact, leveraging my years of experience, Statistics (BS) degree, and analytical ability to assist any football program in making important gameday and strategic decisions.
+ 
           </p>
           <div className="hero-cta">
             <button className="btn-primary" onClick={() => scrollTo("Projects")}>View Projects</button>
