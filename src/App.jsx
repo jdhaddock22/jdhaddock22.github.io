@@ -7,19 +7,19 @@ const EXPERIENCE = [
   {
     role: "Football Analytics Intern",
     org: "Florida Gators Football Program",
-    period: "Aug 2025 – Present",
+    period: "Aug 2025 - Present",
     logo: "/gators-logo.png",
     bullets: [
       "Write Advance Reports actively used by coaching staff in game strategy",
       "Build and design processes to evaluate transfer portal targets using Teamworks-Telemetry Tracking Data and PFF B2B Data",
       "Lead vendor communications with data providers and manage junior interns",
-      "Contribute to contract and NIL conversations alongside football operations leadership",
+      "Contribute to contract and NIL conversations alongside football strategy leadership",
     ],
   },
   {
     role: "Scouting Intern",
     org: "BLESTO",
-    period: "Feb 2025 – Jul 2025",
+    period: "Feb 2025 - Jul 2025",
     logo: "/blesto.png",
     bullets: [
       "Prepared NFL-style preliminary scouting reports on 2026 NFL Draft prospects",
@@ -59,17 +59,29 @@ const PROJECTS = [
     docs: "open",
     desc: "Conducted 10+ studies on athleticism markers to provide insight into which physical traits correlate with football performance.",
   },
+  {
+    title: "Analytics Dashboard",
+    tags: ["Python", "Dashboard", "Data Visualization", "Azure"],
+    docs: "limited",
+    desc: "An interactive dashboard scouts reference during player analysis, bringing player evaluation metrics and grades together in one place. Hosted on Azure so it stays available to staff as a live, server-backed tool.",
+  },
+  {
+    title: "NIL Analytics Projects",
+    tags: ["NIL", "Data-Driven Decisions", "Football Strategy"],
+    docs: "none",
+    desc: "Data-driven analysis supporting NIL and roster decisions for the football program. Details confidential to the team; focused on using data to inform decision making.",
+  },
 ];
 
 const SKILLS = [
   { category: "Programming Languages", items: ["Python", "R"] },
   { category: "Data & Services", items: ["Teamworks API", "Teamworks-Telemetry", "PFF", "LexisNexis", "Google Sheets"] },
   { category: "Methods", items: ["Regression", "XGBoost", "Machine Learning", "Voronoi Analysis", "Player Tracking"] },
-  { category: "Football", items: ["Scouting", "Game Planning", "Transfer Portal Eval", "NIL/Contracts"] },
+  { category: "Football", items: ["Game Planning", "Transfer Portal Eval", "NIL/Contracts"] },
 ];
 
 const ACHIEVEMENTS = [
-  "Presidential Scholarship – University of Florida",
+  "Presidential Scholarship, University of Florida",
   "UF Honors Program",
   "Wharton Moneyball Program Alumni",
 ];
@@ -106,13 +118,10 @@ export default function App() {
           <div className="hero-tag">Football Analytics & Strategy</div>
           <h1>John Haddock</h1>
           <p className="hero-sub">
-            <p className="hero-sub">
-              Bachelor of Science in Statistics · Economics Minor · AI Certificate · University of Florida Honors Program
-            </p>
+            Bachelor of Science in Statistics · Economics Minor · AI Certificate · University of Florida Honors Program
           </p>
           <p className="hero-bio">
-            I provide a unique skillset that blends Football Data Analysis and Strategic Knowledge. I am effective at using these skills to make informed football decisions. I will make an immediate impact, leveraging my years of experience, Statistics (BS) degree, and analytical ability to assist any football program in making important gameday and strategic decisions.
- 
+            I blend football data analysis with real strategic knowledge of the game, and I use both to help programs make smarter, faster decisions. Backed by hands-on analytics experience and a Statistics (B.S.) from Florida, I'm ready to make an immediate impact on the work that wins games, from gameday strategy to roster building.
           </p>
           <div className="hero-cta">
             <button className="btn-primary" onClick={() => scrollTo("Projects")}>View Projects</button>
@@ -121,7 +130,7 @@ export default function App() {
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-num">2+</span>
-              <span className="stat-label">Years in Football Analytics</span>
+              <span className="stat-label">Years in Football Analytics by Graduation</span>
             </div>
             <div className="stat-divider" />
             <div className="stat">
@@ -153,7 +162,7 @@ export default function App() {
                     <div>
                       <h3>University of Florida</h3>
                       <span className="timeline-org">B.S. Statistics · Economics Minor · AI Certificate</span>
-                      <div><span className="timeline-period">Aug 2024 – Dec 2027</span></div>
+                      <div><span className="timeline-period">Aug 2024 - Dec 2027</span></div>
                     </div>
                   </div>
                 </div>
@@ -169,7 +178,7 @@ export default function App() {
                 <div className="timeline-header">
                   <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                     <div style={{ width: "80px", height: "80px", borderRadius: "6px", border: "1px solid #e2e8f0", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img src="/Shorecrest.png" alt="Shorecrest.png" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "6px", border: "0px solid #e2e8f0", padding: "0px", background: "#fff" }}/>
+                      <img src="/Shorecrest.png" alt="Shorecrest Preparatory School" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "6px", border: "0px solid #e2e8f0", padding: "0px", background: "#fff" }}/>
                     </div>
                     <div>
                       <h3>Shorecrest Preparatory School</h3>
@@ -227,8 +236,11 @@ export default function App() {
       <section id="projects" className="section section-alt">
         <div className="section-inner">
           <h2 className="section-title">Projects</h2>
-          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "2rem" }}>
-            Detailed documentation and source code available upon request.
+          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
+            Documentation and some source code available upon request.
+          </p>
+          <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontStyle: "italic", marginBottom: "2rem" }}>
+            Some work is covered by a signed NDA, but I'm happy to discuss scope and methods, within those bounds, on request.
           </p>
           <div className="projects-grid">
             {PROJECTS.map((p, i) => (
@@ -249,6 +261,14 @@ export default function App() {
                       style={{ fontSize: "0.7rem", background: "rgba(249,115,22,0.1)", color: "var(--orange)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "99px", padding: "0.15rem 0.6rem", whiteSpace: "nowrap", flexShrink: 0 }}
                     >
                       ✦ Limited Docs
+                    </span>
+                  )}
+                  {p.docs === "none" && (
+                    <span
+                      title="Confidential to the team, no documentation available"
+                      style={{ fontSize: "0.7rem", background: "rgba(148,163,184,0.12)", color: "var(--text-muted)", border: "1px solid rgba(148,163,184,0.3)", borderRadius: "99px", padding: "0.15rem 0.6rem", whiteSpace: "nowrap", flexShrink: 0 }}
+                    >
+                      ✦ Confidential
                     </span>
                   )}
                 </div>
