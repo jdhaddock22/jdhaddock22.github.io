@@ -42,12 +42,6 @@ const PROJECTS = [
     desc: "Found actionable insights from data on opponent trends, tendencies, and weaknesses. Provided coaching staff with digestible data-derived suggestions to influence strategy and decision making using an NFL-style reporting model.",
   },
   {
-    title: "Transfer Portal Snap Count Study and Pipeline",
-    tags: ["Python", "Teamworks API", "Google Sheets API"],
-    docs: "limited",
-    desc: "Used snap counts to identify players playing at a level that signals they are worth evaluating. Set up and automated a system to create area lists for scouts and auto-populate work lists weekly.",
-  },
-  {
     title: "Comprehensive Analytics Grade Database and Tracker",
     tags: ["Python", "Statistical Modeling", "Teamworks-Telemetry", "Teamworks-Advanced Stats"],
     docs: "open",
